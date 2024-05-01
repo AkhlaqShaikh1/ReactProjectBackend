@@ -1,6 +1,6 @@
 const express = require("express");
 const connect = require("../Database/config");
-const jobModel = require("../Database/model/jobModel");
+const Job = require("../Database/model/jobModel");
 
 const app = express();
 const port = 3000;
@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 
 app.get("/jobs", async (req, res) => {
   try {
-    const jobs = await jobModel.find();
+    const jobs = await Job.find();
     res.json(jobs);
   } catch (error) {
     res.json({ message: error });
