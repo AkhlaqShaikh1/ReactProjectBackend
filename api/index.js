@@ -1,8 +1,10 @@
 const express = require("express");
 const connect = require("../Database/config");
 const Job = require("../Database/model/jobModel");
+const cors = require("cors");
 
 const app = express();
+app.use(cors());
 const port = 3000;
 app.use(express.json());
 connect();
