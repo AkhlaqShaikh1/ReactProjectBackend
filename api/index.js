@@ -4,7 +4,11 @@ const Job = require("../Database/model/jobModel");
 const cors = require("cors");
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 const port = 3000;
 app.use(express.json());
 connect();
