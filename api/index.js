@@ -6,7 +6,7 @@ const cors = require("cors");
 const app = express();
 app.use(
   cors({
-    origin: "*",
+    origin: "https://react-project-ten-smoky.vercel.app/add-job",
   })
 );
 const port = 3000;
