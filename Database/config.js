@@ -6,7 +6,7 @@ const db = process.env.MONGODB_URI;
 function connect() {
   mongoose
     .connect(db + "TUT1", {
-      serverSelectionTimeoutMS: 5000,
+      serverSelectionTimeoutMS: 10000,
     })
     .then(() => {
       console.log("Database is connected");
