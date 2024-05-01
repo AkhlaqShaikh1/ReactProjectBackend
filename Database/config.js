@@ -9,10 +9,10 @@ function connect() {
       serverSelectionTimeoutMS: 5000,
     })
     .then(() => {
-      console.log("server is connected");
+      console.log("Database is connected");
     })
     .catch((err) => {
-      console.log(err);
+      console.log(JSON.stringify(err));
     });
 }
 
