@@ -2,6 +2,10 @@ const express = require("express");
 const router = express.Router();
 const Job = require("./Database/model/jobModel");
 
+router.get("/", (req, res) => {
+  res.send("Hello World");
+});
+
 router.get("/jobs", async (req, res) => {
   try {
     const jobs = await Job.find();
