@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 app.get("/jobs", async (req, res) => {
   try {
     const jobs = await Job.find();
-    res.send(json(jobs));
+    res.json(jobs);
   } catch (error) {
     res.json({ message: error });
   }
