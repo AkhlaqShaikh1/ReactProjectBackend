@@ -6,7 +6,7 @@ const cors = require("cors");
 const app = express();
 app.use(
   cors({
-    origin: "https://react-project-ten-smoky.vercel.app/add-job",
+    origin: "*",
   })
 );
 const port = 3000;
@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 app.get("/jobs", async (req, res) => {
   try {
     const jobs = await Job.find();
-    res.json(jobs);
+    res.send(json(jobs));
   } catch (error) {
     res.json({ message: error });
   }
